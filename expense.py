@@ -30,7 +30,7 @@ current_month = datetime.now().strftime("%Y-%m")
 monthly_df = df[df['Date'].dt.strftime("%Y-%m") == current_month]
 # Total Spend
 total_spend = monthly_df['Amount'].sum()
-st.subheader(f"Total Spend this Month: ${total_spend:.2f}")
+st.subheader(f"Total Spend this Month: Rs. {total_spend:.2f}")
 # Budget Alert
 if total_spend > budget:
     st.error(f"Alert: You've exceeded your budget by ${total_spend - budget:.2f}!")

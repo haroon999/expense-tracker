@@ -155,7 +155,7 @@ if not df.empty:
 budget = st.number_input(
     "Set Monthly Budget",
     min_value=0.0,
-    value=1000.0,
+    value=1000000.0,
     format="%.2f"
 )
 
@@ -262,3 +262,4 @@ if not df.empty:
         title="Monthly Spend Over Time"
     )
     st.plotly_chart(bar_fig)
+
